@@ -2,7 +2,7 @@
 def no_c(my_string):
     strlen = len(my_string)
     count = ''
-    for a in range(strlen):
-        if (my_string[a] != 'C' and my_string[a] != 'c'):
-            count = count + my_string[a]
+    for a in my_string:
+        if (my_string != 'C' and my_string != 'c'):
+            count = count + a
     return count
