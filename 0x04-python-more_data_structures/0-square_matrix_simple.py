@@ -1,7 +1,5 @@
 def square_matrix_simple(matrix=[]):
     newMatrix = []
     for item in matrix:
-        for i in item:
-            x = i ** 2 
-            newMatrix.append([x])
+        newMatrix.append([i ** 2 for i in item])
     return newMatrix
