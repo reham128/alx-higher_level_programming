@@ -57,6 +57,6 @@ class Rectangle:
             str_rec += '\n'
         return str_rec[:-1]
 
-    def __rep__(self):
+    def __repr__(self):
         '''eturn a string representation of the rectangle'''
         return ('Rectangle({:d}, {:d})'.format(self.__width, self.__height))
