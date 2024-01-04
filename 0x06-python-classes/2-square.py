@@ -1,7 +1,18 @@
 #!/usr/bin/python3
-class Square:
+''' class definition'''
 
+
+class Square:
+    '''class body'''
     def __init__(self, size=0):
+        '''init definition
+         Raises:
+         ValueError: if size is negative
+         TypeError: if size is not integer
+
+         Args:
+         size:side length
+         '''
         if not isinstance(size, int):
             raise TypeError('size must be an integer')
         elif size < 0:
