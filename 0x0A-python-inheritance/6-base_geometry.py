@@ -4,7 +4,6 @@
 
 class BaseGeometry:
     '''class start'''
-    
     def area(self):
         '''empyt'''
         raise Exception("area() is not implemented")
