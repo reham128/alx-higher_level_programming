@@ -4,10 +4,10 @@
 
 class MyInt(int):
     '''class to reverse functionallity of equal and not equal'''
-    def __eq__(self, value):
+    def __eq__(self, input_val):
         '''change == to !=='''
-        return (self.real != value)
+        return (int(self) != input_val)
 
-    def __ne__(self, value):
+    def __ne__(self, input_val):
         '''change != to =='''
-        return (self.real == value)
+        return (int(self) == input_val)
