@@ -9,12 +9,10 @@ def pascal_triangle(n):
         return []
 
     output = [[1]]
-    out_len = len(output)
-    while out_len != n:
+    while (len(output)) != n:
         a = output[-1]
         last = [1]
-        a_len = len(a)
-        for i in range(a_len - 1):
+        for i in range((len(a)) - 1):
             last.append(a[i] + a[i + 1])
         last.append(1)
         output.append(last)
