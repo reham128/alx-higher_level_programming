@@ -5,15 +5,13 @@ after each line containing a specific string'''
 
 def append_after(filename="", search_string="", new_string=""):
     '''function body'''
-    out = []
+    out = ''
     with open(filename, "r", encoding="utf-8") as file_r:
-        out_line = file_r.readline()
-        if out_line == "":
-            break
-
-        out.append(out_line)
-        if search_string in out_line:
-            out.append(new_string)
+        tmp = file_r.readline()
+        for out_line in file_r:
+            out += tmp
+            if search_string in tmp:
+                out += new_string
 
     with open(filename, "w", encoding="utf-8") as file_w:
         file_w.writelines(out)
