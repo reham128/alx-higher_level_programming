@@ -47,5 +47,4 @@ Test input string and int:
 Test input is None:
    >>> add_integer()
    Traceback (most recent call last):
-       ...
-   TypeError: add_integer() missing 1 required positional argument: "a"
+   TypeError: add_integer() missing 1 required positional argument: "a" 
