@@ -25,6 +25,7 @@ def matrix_divided(matrix, div):
 
     return [[round(colum / div, 2) for colum in raw] for raw in matrix]
 
+
 if __name__ == '__main__':
     import doctest
     doctest.testfile('tests/2-matrix_divided.txt')
