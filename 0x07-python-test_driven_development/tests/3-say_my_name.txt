@@ -1,0 +1,44 @@
+'task 3 module .. say my name':
+===============================
+
+Unit tests:
+-----------
+
+Import module:
+   >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+start testing:
+   >>> say_my_name("Hello", "Python")
+   My name is Hello Python
+
+   >>> say_my_name("Hi")
+   My name is Hi
+
+   >>> say_my_name("", "")
+   My name is
+
+   >>> say_my_name(" ", " ")
+   My name is
+
+   >>> say_my_name("", "last")
+   My name is last
+
+   >>> say_my_name(10, "last")
+   Traceback (most recent call last):
+   ...
+   TypeError: first_name must be a string
+
+   >>> say_my_name("Hi", 10)
+   Traceback (most recent call last):
+   ...
+   TypeError: last_name must be a string
+
+   >>> say_my_name(10, 10)
+   Traceback (most recent call last):
+   ...
+   TypeError: first_name must be a string
+
+   >>> say_my_name()
+   Traceback (most recent call last):
+   ...
+   TypeError: say_my_name() missing 1 required positional argument: 'first_name'
