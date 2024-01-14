@@ -1,8 +1,5 @@
-'task 3 module .. say my name':
+''task 3 module .. say my name'':
 ===============================
-
-Unit tests:
------------
 
 Import module:
    >>> say_my_name = __import__('3-say_my_name').say_my_name

@@ -1,9 +1,6 @@
 "0-add_integer" module
 ======================
 
-Using: Unit test for (add_integer) function
--------------------------------------------
-
 Import function:
 
      >>> add_integer = __import__('0-add_integer').add_integer

@@ -1,9 +1,6 @@
 'task 2 .. matrix divition module'
 ==================================
 
-Unit tests for function of matrix divition
--------------------------------------------
-
 Import module:
    >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
 
