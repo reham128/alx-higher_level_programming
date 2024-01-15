@@ -101,4 +101,24 @@ implemented.
         ...
 	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
+	>>> bg.integer_validator("name", [1, 2])
+	Traceback (most recent call last):
+        ...
+	TypeError: name must be an integer
+
+	>>> bg.integer_validator("name", (1, 2))
+	Traceback (most recent call last):
+        ...
+	TypeError: name must be an integer
+
+	>>> bg.integer_validator("name", {2, 8})
+	Traceback (most recent call last):
+        ...
+	TypeError: name must be an integer
+
+	>>> bg.integer_validator("name", {"a": 8})
+	Traceback (most recent call last):
+        ...
+	TypeError: name must be an integer
+
 
