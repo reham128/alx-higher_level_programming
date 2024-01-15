@@ -1,9 +1,9 @@
 #1-my_list.txt
 #Reham Saeed <r_nour30@yahoo.com>
 
-=================================
+=======================
 How to use 1-my_list.py
-=================================
+=======================
 
 
 This module defines a class ``MyList`` that inherits from ``list``.
@@ -14,6 +14,7 @@ Instantiation
 ``MyList`` can be instantiated with no arguments, which will return
 an empty list:
 
+::
 
 Import module:
     >>> MyList = __import__('1-my_list').MyList
