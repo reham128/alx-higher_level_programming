@@ -50,7 +50,7 @@ class Rectangle(Base):
     def x(self, value):
         if type(value) != int:
             raise TypeError("x must be an integer")
-        if value <= 0:
+        if value < 0:
             raise ValueError("x must be > 0")
         self.__x = value
 
@@ -63,9 +63,9 @@ class Rectangle(Base):
     def y(self, value):
         if type(value) != int:
             raise TypeError("x must be an integer")
-        if value <= 0:
+        if value < 0:
             raise ValueError("x must be > 0")
-        self.__x = value
+        self.__y = value
 
     def area(self):
         '''find rect area'''
