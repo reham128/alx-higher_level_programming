@@ -9,11 +9,11 @@ class Rectangle(Base):
     
     def __init__(self, width, height, x=0, y=0, id=None):
         '''init start'''
-        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
@@ -88,3 +88,18 @@ class Rectangle(Base):
         str_w_h = "{}/{}".format(self.width, self.height)
 
         return str_rec + str_id + str_x_y + str_w_h
+
+    def update(self, *args, **kwargs):
+        '''*args and **kwargs'''
+        if len(args) == 0:
+            for k, v in kwargs.items():
+                self.__setattr__(k, v)
+            return
+        try:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        except IndexError:
+            pass
