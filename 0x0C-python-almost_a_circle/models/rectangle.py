@@ -83,12 +83,8 @@ class Rectangle(Base):
 
     def __str__(self):
         '''method str to representation'''
-        str_rec = "[Rectangle]"
-        str_id = "({}) ".format(self.id)
-        str_x_y = "{}/{} - ".format(self.x, self.y)
-        str_w_h = "{}/{}".format(self.width, self.height)
-
-        return str_rec + str_id + str_x_y + str_w_h
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
+                                                       self.width, self.height)
 
     def update(self, *args, **kwargs):
         '''*args and **kwargs'''
