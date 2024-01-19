@@ -43,13 +43,7 @@ class Square(Rectangle):
 
         def to_dictionary(self):
             '''dictionary representation of the square class'''
-            attrs = ["id", "size", "x", "y"]
-            sq_dic = {}
-
-            for k in attrs:
-                if k == "size":
-                    sq_dic[k] = getattr(self, "width")
-                else:
-                    sq_dic[k] = getattr(self, k)
-
-            return sq_dic
+            return {'id': self.id,
+                    'size': self.width,
+                    'x': self.x,
+                    'y': self.y}
