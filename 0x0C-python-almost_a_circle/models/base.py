@@ -72,3 +72,21 @@ class Base:
             instance_list.append(cls.create(**clss_list[i]))
 
         return instance_list
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        '''serializes in CSV'''
+        f_name = "{}.csv".format(cls.__name__)
+
+        with open(f_name, "w", newLine="") as fcsv:
+            if list_objs is None or list_objs == []:
+                fcsv.write("[]")
+            else:
+                if cls.__name__ == "Rectangle":
+                    oblist = ['id', 'width', 'height', 'x', 'y']
+                else:
+                    oblist = ['id', 'size', 'x', 'y']
+                new = csv.DictWriter(fcsv, oblist=oblist)
+                for ob in list_objs:
+                    new.writerow(ob.to_dictionary())
+
