@@ -89,4 +89,3 @@ class Base:
                 new = csv.DictWriter(fcsv, oblist=oblist)
                 for ob in list_objs:
                     new.writerow(ob.to_dictionary())
-
