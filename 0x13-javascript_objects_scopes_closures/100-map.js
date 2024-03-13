@@ -1,3 +1,5 @@
 #!/usr/bin/node
-const = list = [1, 2, 3, 4, 5];
-module.exports = list;
+const list = require('./100-data.js').list;
+const newArr = list.map(item, indx);
+console.log(list);
+console.log(newArr);
