@@ -16,8 +16,8 @@ if __name__ == "__main__":
         mydb = MySQLdb.connect(host="localhost", port=3306, user=username,
                                passwd=password, db=database)
     mycursor = mydb.cursor()
-    sql = "SELECT * FROM states WHERE BINARY \
-           name = '{}' ORDER BY".format(state_n)
+    sql = "SELECT * FROM states WHERE BINARY\
+           name = '{}' ORDER BY id".format(state_n)
     mycursor.execute(sql)
     states = mycursor.fetchall()
     for result in states:
