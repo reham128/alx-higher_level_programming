@@ -17,7 +17,7 @@ if __name__ == "__main__":
                                passwd=password, db=database)
     mycursor = mydb.cursor()
     sql = "SELECT * FROM states WHERE name = %s ORDER BY id"
-    mycursor.execute(sql, state_n)
+    mycursor.execute(sql, (state_n,))
     states = mycursor.fetchall()
     for result in states:
         print(result)
