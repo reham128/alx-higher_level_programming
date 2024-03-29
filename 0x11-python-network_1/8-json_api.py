@@ -16,7 +16,7 @@ if __name__ == "__main__":
         data = {"q": q}
         resp = requests.post(url, data=data)
         try:
-            d_json = response.json()
+            d_json = resp.json()
             if d_json:
                 print("[{}] {}".format(d_json["id"], d_json["name"]))
             else:
