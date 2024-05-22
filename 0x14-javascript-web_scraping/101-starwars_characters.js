@@ -11,15 +11,15 @@ request.get(url, (error, response, body) => {
   }
 
   const characters = JSON.parse(body).characters;
-  printAllCharacters(characters, 0);
+  printAll(characters, 0);
 });
 
-function printAllCharacters (ch, idx) {
-  request(ch[idx], function (error, response, body) {
+function printAll (charc, i) {
+  request(charc[i], function (error, response, body) {
     if (error) console.error(error);
     else {
       console.log(JSON.parse(body).name);
-      if (idx + 1 < ch.length) printAllCharacters(ch, idx + 1);
+      if (i + 1 < charc.length) printAll(charc, i + 1);
     }
   });
 }
